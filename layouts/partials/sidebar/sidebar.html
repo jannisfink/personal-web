@@ -1,4 +1,4 @@
-<header style="{{ partial "sidebar/style" . | safeCSS }}">
+<header style="{{ partial "sidebar/style" . | safeCSS }}" class="header--small">
 
   <div class="intro">
     <div class="logo-container">
@@ -6,8 +6,8 @@
         <img src='{{ .Site.Params.sidebar.logo | default "images/edna-west.jpg" | absURL }}' alt="Profile {{ .Title }}" class="rounded-logo">
       </a>
     </div>
-    <h2>{{ .Site.Params.intro.main | default "Welcome, I'm John Doe" | emojify }}</h2>
-    <h3>{{ .Site.Params.intro.sub | default "This is my personal website" | emojify }}</h3>
+    <h2 class="intro__main">{{ .Site.Params.intro.main | default "Welcome, I'm John Doe" | emojify }}</h2>
+    <h3 class="intro__sub">{{ .Site.Params.intro.sub | default "This is my personal website" | emojify }}</h3>
     <div class="menu">
       {{ partial "sidebar/menu" . }}
       {{ if .Site.Params.contact.email }}

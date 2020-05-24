@@ -175,6 +175,31 @@ header
       bottom: inherit
       display: block
       position: relative
+  
+  &.header--small
+
+    +smartphone
+      .intro
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: $padding-content_mobile-header
+
+        .rounded-logo
+          width: 3rem
+          height: 3rem
+        
+        .menu
+          display: flex
+
+          p
+            padding: 0
+
+          p
+            margin-right: $horizontal-menu-spacing
+
+      .intro__main, .intro__sub
+        display: none
 
 #content, .breadcrumb
   max-width: $max-width-content
