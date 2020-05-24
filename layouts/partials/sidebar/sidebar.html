@@ -1,4 +1,4 @@
-<header style="{{ partial "sidebar/style" . | safeCSS }}" class="header--small">
+<header style="{{ partial "sidebar/style" . | safeCSS }}" {{if .Site.Params.smallHeader}}class="header--small"{{end}}>
 
   <div class="intro">
     <div class="logo-container">
